@@ -1,3 +1,4 @@
+/* global sweetAlert */
 'use strict';
 
 var app = angular.module('32ResultsApp');
@@ -37,6 +38,7 @@ app.controller('MainCtrl', function($scope, $mdDialog) {
 
 
   vm.cancel = function() {
+    sweetAlert('Hi');
     vm.lastName = '';
     vm.firstName = '';
     vm.email = '';
