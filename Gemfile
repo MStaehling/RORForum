@@ -9,6 +9,10 @@ gem 'spring', :group => :development
 
 gem 'bower-rails'
 
+gem 'angular-rails-templates'
+
+gem 'sprockets', '2.12.3'
+
 gem 'sqlite3'
 
 
