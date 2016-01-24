@@ -11,6 +11,12 @@ angular
     'ngTouch',
     'ngMaterial'
   ])
+  .factory('email', [function(){
+  var o = {
+    email: []
+  };
+  return o;
+}])
   .config(function($mdThemingProvider) {
     $mdThemingProvider.theme('default')
 

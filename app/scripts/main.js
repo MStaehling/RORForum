@@ -6,7 +6,7 @@ app.run(function($log) {
   $log.debug('App Run');
 });
 
-app.controller('MainCtrl', function($scope, $mdDialog) {
+app.controller('MainCtrl', function($scope, $mdDialog, email) {
   var vm = this;
 
   var action = function(event) {
@@ -20,12 +20,9 @@ app.controller('MainCtrl', function($scope, $mdDialog) {
     );
   };
 
-  // download the data into a local object
-  //vm.contact = $firebaseArray(ref);
-
   vm.submit = function() {
     sweetAlert('Thank You for signing up.', 'You will now receive future product updates.', 'success');
-        vm.contact.$add({
+        vm.email.push({
           lastName: vm.lastName,
           firstName: vm.firstName,
           email: vm.email
@@ -34,8 +31,6 @@ app.controller('MainCtrl', function($scope, $mdDialog) {
         vm.firstName = '';
         vm.email = '';
       };
-
-
   vm.cancel = function() {
     vm.lastName = '';
     vm.firstName = '';
